@@ -2,7 +2,7 @@ import React from "react";
 import bannerImg from "../assets/about-banner.jpg";
 
 // Top cards (CEO & Manager)
-import shareefImg from "../assets/Shareef.jpg";
+import shareefImg from "../assets/Shareef1.jpg";
 import thwayyibImg from "../assets/Thwayyib.jpg";
 
 // Team members (4 cards)
