@@ -2,14 +2,14 @@ import React from "react";
 import bannerImg from "../assets/about-banner.jpg";
 
 // Top cards (CEO & Manager)
-import shareefImg from "../assets/shareef.jpg";
-import thwayyibImg from "../assets/thwayyib.jpg";
+import shareefImg from "../assets/Shareef.jpg";
+import thwayyibImg from "../assets/Thwayyib.jpg";
 
 // Team members (4 cards)
-import afzarImg from "../assets/afzar.jpg";
-import jaleelImg from "../assets/jaleel.jpg";
-import khaderImg from "../assets/khader.jpg";
-import riyasImg from "../assets/riyas.jpg";
+import afzarImg from "../assets/Afzar.jpg";
+import jaleelImg from "../assets/Jaleel.jpg";
+import khaderImg from "../assets/Khader.jpg";
+import riyasImg from "../assets/Riyas.jpg";
 
 import { FaPhoneAlt } from "react-icons/fa";
 
