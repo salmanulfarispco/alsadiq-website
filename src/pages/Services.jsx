@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+       
 
 // Import all your images
 import typingImg from "../assets/12.jpg";
@@ -44,46 +46,46 @@ import printing from '../assets/printing.jpg'
 
 export default function Services() {
   const services = [
-    { title: "e-Migrate System", description: "A digital platform to manage employee migration, work permits, and labor approvals efficiently and securely.", image: typingImg },
-    { title: "Application Forms", description: "Streamlined support for submitting application forms, whether online or offline, making processes fast and hassle-free.", image: printingImg },
-    { title: "ILS/BLS Registration", description: "Professional ILS and BLS registration made easy. We guide you through documentation to certification", image: documentImg },
-    { title: "Certificate Of equivalency", description: "We help you obtain Certificates of Equivalency quickly, ensuring your qualifications are officially recognized.", image: computerImg },
-    { title: "Company Classification", description: "Get your company classified officially.", image: Company },
-    { title: "Company Formation", description: "Complete process of company registration and formation.", image: Formation },
-    { title: "Contract Registration", description: "Register Baladiya contracts efficiently.", image: Contract },
-    { title: "CP Amendments", description: "Amend your Commercial Permits quickly.", image: CP },
-    { title: "CR Amendments", description: "Update your Commercial Registration information.", image: CR },
-    { title: "Custom Services", description: "Expert guidance for all customs procedures.", image: Custom },
-    { title: "Data Flow Services", description: "Manage data flow certificates easily.", image: DataFLow },
-    { title: "Document Attestation", description: "Official document attestation services.", image: Document },
-    { title: "Event Approvals", description: "Get approvals for corporate and personal events.", image: Event },
-    { title: "Health Card Renewal", description: "Renew your health cards hassle-free.", image: Health },
-    { title: "Hukoomi Services", description: "Access government e-services with ease.", image: Hukoomi },
-    { title: "Labour Contract Attestation", description: "Authenticate labour contracts legally.", image: Labour },
-    { title: "License Discount", description: "Avail discounts on official licenses.", image: License },
-    { title: "MOPH Appointments", description: "Book Ministry of Public Health appointments.", image: MOPH },
-    { title: "PAN Card Services", description: "Apply and manage PAN cards.", image: PanCard },
-    { title: "Passport Services", description: "Renew or apply for new passports easily.", image: Passport },
-    { title: "PCC Certificate", description: "Obtain Police Clearance Certificates efficiently.", image: PCC },
-    { title: "Pravasi Services", description: "Support for expatriates and their documents.", image: Pravasi },
-    { title: "Profession Change", description: "Update your profession in official records.", image: profession },
-    { title: "Prometric Exams", description: "Book and manage Prometric exams.", image: Prometric },
-    { title: "QCHP Registration", description: "Healthcare professional licensing services.", image: QCHP },
-    { title: "Saudi Services", description: "Documentation and services related to Saudi requirements.", image: Saudi },
-    { title: "Signage Approvals", description: "Get approvals for your business signage.", image: Signage },
-    { title: "Sponsor Services", description: "Manage sponsor documentation easily.", image: Sponsor },
-    { title: "Sponsorship Services", description: "Complete sponsorship registration support.", image: SponsorShip },
-    { title: "Photo Studio Services", description: "Professional studio photography services.", image: studio },
-    { title: "Tax Card Services", description: "Apply or renew your tax card effortlessly.", image: Tax },
-    { title: "Traffic Services", description: "Manage traffic-related documentation and approvals.", image: Traffic },
-    { title: "Translation Services", description: "Certified document translation services.", image: Translation },
-    { title: "UPDA Services", description: "Professional support for UPDA processes.", image: UPDA },
-    { title: "Vehicle Services", description: "Vehicle registration, insurance, and documentation.", image: Vehicle },
-    { title: "Visa Services", description: "Visa application, renewal, and support services.", image: visa },
-    { title: "Waste Management", description: "Efficient waste management services.", image: Waste },
-    { title: "Work Permit Services", description: "Apply for and manage work permits.", image: work },
-    { title: "Frame works", description: "Custom Photo Framing – Designed to match your style and space.", image: frame},
-    { title: "Photo Printing Services", description: "HD Photo Printing – High-quality prints with sharp, vibrant colors.", image: printing }
+    { id: 1, title: "e-Migrate System", description: "A digital platform to manage employee migration, work permits, and labor approvals efficiently and securely.", image: typingImg },
+    { id: 2, title: "Application Forms", description: "Streamlined support for submitting application forms, whether online or offline, making processes fast and hassle-free.", image: printingImg },
+    { id: 3, title: "ILS/BLS Registration", description: "Professional ILS and BLS registration made easy. We guide you through documentation to certification", image: documentImg },
+    { id: 4, title: "Certificate Of equivalency", description: "We help you obtain Certificates of Equivalency quickly, ensuring your qualifications are officially recognized.", image: computerImg },
+    { id: 5, title: "Company Classification", description: "Get your company classified officially.", image: Company },
+    { id: 6, title: "Company Formation", description: "Complete process of company registration and formation.", image: Formation },
+    { id: 7, title: "Contract Registration", description: "Register Baladiya contracts efficiently.", image: Contract },
+    { id: 8, title: "CP Amendments", description: "Amend your Commercial Permits quickly.", image: CP },
+    { id: 9, title: "CR Amendments", description: "Update your Commercial Registration information.", image: CR },
+    { id: 10, title: "Custom Services", description: "Expert guidance for all customs procedures.", image: Custom },
+    { id: 11, title: "Data Flow Services", description: "Manage data flow certificates easily.", image: DataFLow },
+    { id: 12, title: "Document Attestation", description: "Official document attestation services.", image: Document },
+    { id: 13, title: "Event Approvals", description: "Get approvals for corporate and personal events.", image: Event },
+    { id: 14, title: "Health Card Renewal", description: "Renew your health cards hassle-free.", image: Health },
+    { id: 15, title: "Hukoomi Services", description: "Access government e-services with ease.", image: Hukoomi },
+    { id: 16, title: "Labour Contract Attestation", description: "Authenticate labour contracts legally.", image: Labour },
+    { id: 17, title: "License Discount", description: "Avail discounts on official licenses.", image: License },
+    { id: 18, title: "MOPH Appointments", description: "Book Ministry of Public Health appointments.", image: MOPH },
+    { id: 19, title: "PAN Card Services", description: "Apply and manage PAN cards.", image: PanCard },
+    { id: 20, title: "Passport Services", description: "Renew or apply for new passports easily.", image: Passport },
+    { id: 21, title: "PCC Certificate", description: "Obtain Police Clearance Certificates efficiently.", image: PCC },
+    { id: 22, title: "Pravasi Services", description: "Support for expatriates and their documents.", image: Pravasi },
+    { id: 23, title: "Profession Change", description: "Update your profession in official records.", image: profession },
+    { id: 24, title: "Prometric Exams", description: "Book and manage Prometric exams.", image: Prometric },
+    { id: 25, title: "QCHP Registration", description: "Healthcare professional licensing services.", image: QCHP },
+    { id: 26, title: "Saudi Services", description: "Documentation and services related to Saudi requirements.", image: Saudi },
+    { id: 27, title: "Signage Approvals", description: "Get approvals for your business signage.", image: Signage },
+    { id: 28, title: "Sponsor Services", description: "Manage sponsor documentation easily.", image: Sponsor },
+    { id: 29, title: "Sponsorship Services", description: "Complete sponsorship registration support.", image: SponsorShip },
+    { id: 30, title: "Photo Studio Services", description: "Professional studio photography services.", image: studio },
+    { id: 31, title: "Tax Card Services", description: "Apply or renew your tax card effortlessly.", image: Tax },
+    { id: 32, title: "Traffic Services", description: "Manage traffic-related documentation and approvals.", image: Traffic },
+    { id: 33, title: "Translation Services", description: "Certified document translation services.", image: Translation },
+    { id: 34, title: "UPDA Services", description: "Professional support for UPDA processes.", image: UPDA },
+    { id: 35, title: "Vehicle Services", description: "Vehicle registration, insurance, and documentation.", image: Vehicle },
+    { id: 36, title: "Visa Services", description: "Visa application, renewal, and support services.", image: visa },
+    { id: 37, title: "Waste Management", description: "Efficient waste management services.", image: Waste },
+    { id: 38, title: "Work Permit Services", description: "Apply for and manage work permits.", image: work },
+    { id: 39, title: "Frame works", description: "Custom Photo Framing – Designed to match your style and space.", image: frame },
+    { id: 40, title: "Photo Printing Services", description: "HD Photo Printing – High-quality prints with sharp, vibrant colors.", image: printing }
   ];
 
   return (
@@ -103,7 +105,7 @@ export default function Services() {
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
           <div
-            key={index}
+            key={service.id}
             className="bg-white rounded-lg shadow overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center"
           >
             <div className="w-full bg-gray-100 flex justify-center items-center">
@@ -116,9 +118,13 @@ export default function Services() {
             <div className="p-4 text-center">
               <h2 className="text-lg font-semibold mb-2">{service.title}</h2>
               <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
-              <button className="bg-blue-600 text-white px-3 py-1.5 text-sm rounded hover:bg-blue-700 transition duration-300">
-  Read More
-</button>
+
+              <Link
+                to={`/services/${service.id}`}
+                className="bg-blue-600 text-white px-3 py-1.5 text-sm rounded hover:bg-blue-700 transition duration-300 inline-block"
+              >
+                Read More
+              </Link>
 
             </div>
           </div>
