@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import bannerImg from "../assets/about-banner.jpg";
 
 // Top cards (CEO & Manager)
@@ -14,6 +15,11 @@ import riyasImg from "../assets/Riyas.jpg";
 import { FaPhoneAlt } from "react-icons/fa";
 
 export default function About() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
 
@@ -22,7 +28,7 @@ export default function About() {
         className="relative text-white text-center py-44 px-4 bg-cover bg-center"
         style={{
           backgroundImage: `url(${bannerImg})`,
-          backgroundPosition: "center top", // focuses on top-center (adjust as needed)
+          backgroundPosition: "center top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -40,9 +46,19 @@ export default function About() {
       <section className="py-12 px-4 max-w-6xl mx-auto">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Card - CEO */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex">
-            <div className="w-1/3 hidden sm:block">
-              <img src={shareefImg} alt="Mohammed Shareef" className="w-full h-full object-cover" />
+          <motion.div
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition flex flex-col sm:flex-row"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <div className="w-full sm:w-1/3 flex-shrink-0">
+              <img
+                src={shareefImg}
+                alt="Mohammed Shareef"
+                className="w-full h-64 sm:h-full object-cover"
+              />
             </div>
             <div className="w-full sm:w-2/3 p-6 flex flex-col justify-center">
               <h3 className="text-2xl font-semibold mb-1">Mohammed Shareef</h3>
@@ -51,12 +67,22 @@ export default function About() {
                 Founder and CEO of Al Sadiq. Mohammed leads the company’s strategy and ensures quality service delivery for all clients.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card - Manager */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex">
-            <div className="w-1/3 hidden sm:block">
-              <img src={thwayyibImg} alt="Mohammed Thwayyib" className="w-full h-full object-cover" />
+          <motion.div
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition flex flex-col sm:flex-row"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <div className="w-full sm:w-1/3 flex-shrink-0">
+              <img
+                src={thwayyibImg}
+                alt="Mohammed Thwayyib"
+                className="w-full h-64 sm:h-full object-cover"
+              />
             </div>
             <div className="w-full sm:w-2/3 p-6 flex flex-col justify-center">
               <h3 className="text-2xl font-semibold mb-1">Mohammed Thwayyib</h3>
@@ -65,62 +91,36 @@ export default function About() {
                 Operations Manager overseeing day-to-day processes and client relations, ensuring efficient and timely service.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Working Team - 4 cards */}
       <section className="py-8 px-4 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-black-900 mb-8">Our Working Team</h2>
-
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Mohammed Afzar */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <img src={afzarImg} alt="Mohammed Afzar" className="w-full h-48 object-cover" />
-            <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold">Mohammed Afzar</h3>
-              <p className="text-sm text-gray-600">Graphic Designer</p>
-              <p className="mt-2 text-gray-700 text-sm">
-                Creative designer handling visual content, banners, and promotional material for the center.
-              </p>
-            </div>
-          </div>
-
-          {/* Abdul Jaleel */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <img src={jaleelImg} alt="Abdul Jaleel" className="w-full h-48 object-cover" />
-            <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold">Abdul Jaleel</h3>
-              <p className="text-sm text-gray-600">Banking Specialist</p>
-              <p className="mt-2 text-gray-700 text-sm">
-                Expert in bank documentation and procedures — helps clients with bank-related paperwork and verifications.
-              </p>
-            </div>
-          </div>
-
-          {/* Abdul Khader */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <img src={khaderImg} alt="Abdul Khader" className="w-full h-48 object-cover" />
-            <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold">Abdul Khader</h3>
-              <p className="text-sm text-gray-600">Document Expert</p>
-              <p className="mt-2 text-gray-700 text-sm">
-                Handles document preparation, attestation, and verification to ensure accuracy and compliance.
-              </p>
-            </div>
-          </div>
-
-          {/* Muhammed Riyas */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <img src={riyasImg} alt="Muhammed Riyas" className="w-full h-48 object-cover" />
-            <div className="p-4 text-center">
-              <h3 className="text-lg font-semibold">Muhammed Riyas</h3>
-              <p className="text-sm text-gray-600">English / Arabic Translation Expert</p>
-              <p className="mt-2 text-gray-700 text-sm">
-                Professional translator providing accurate English–Arabic translation for documents and communications.
-              </p>
-            </div>
-          </div>
+          {[
+            { img: afzarImg, name: "Mohammed Afzar", role: "Graphic Designer", desc: "Creative designer handling visual content, banners, and promotional material for the center." },
+            { img: jaleelImg, name: "Abdul Jaleel", role: "Banking Specialist", desc: "Expert in bank documentation and procedures — helps clients with bank-related paperwork and verifications." },
+            { img: khaderImg, name: "Abdul Khader", role: "Document Expert", desc: "Handles document preparation, attestation, and verification to ensure accuracy and compliance." },
+            { img: riyasImg, name: "Muhammed Riyas", role: "English / Arabic Translation Expert", desc: "Professional translator providing accurate English–Arabic translation for documents and communications." },
+          ].map((member, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <img src={member.img} alt={member.name} className="w-full h-48 object-cover" />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <p className="text-sm text-gray-600">{member.role}</p>
+                <p className="mt-2 text-gray-700 text-sm">{member.desc}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -148,7 +148,6 @@ export default function About() {
           <FaPhoneAlt className="mr-3 text-blue-600" /> +974-7727-2786
         </p>
       </section>
-
     </div>
   );
 }
