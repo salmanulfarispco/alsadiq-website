@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="flex flex-wrap md:flex-nowrap items-center space-x-3 md:space-x-5 text-sm">
           {/* Phone */}
           <a
-            href="tel:+97431169313"
+            href="tel:+974-7727-2786"
             className="flex items-center space-x-1 hover:text-green-400 transition-colors duration-300"
           >
             📞 <span>+974-7727-2786</span>
@@ -52,7 +52,7 @@ export default function Navbar() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/9743116-9313"
+            href="https://wa.me/97431169313"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-1 hover:text-green-400 transition-colors duration-300"
@@ -65,7 +65,7 @@ export default function Navbar() {
             >
               <path d="M20.52 3.48A11.913 11.913 0 0012 0C5.372 0 0 5.373 0 12c0 2.12.555 4.084 1.52 5.78L0 24l6.52-1.52A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12 0-3.22-1.27-6.21-3.48-8.52zM12 22c-1.9 0-3.72-.52-5.26-1.48l-.38-.23-3.87.9.92-3.77-.25-.39C2.54 15.7 2 13.87 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.19-7.68c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.33-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.46-.16 0-.35-.02-.54-.02s-.48.07-.73.33c-.25.27-.96.94-.96 2.29 0 1.35.98 2.66 1.12 2.84.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.1-.25-.16-.52-.3z" />
             </svg>
-            <span>+974‑7727-2786</span>
+            <span>+974-3116-9313</span>
           </a>
 
           {/* Email */}
@@ -74,12 +74,12 @@ export default function Navbar() {
           </div>
 
           {/* Language Toggle */}
-         
-            {/* Sliding Circle */}
-        
-            {/* Labels */}
-           
-          
+
+          {/* Sliding Circle */}
+
+          {/* Labels */}
+
+
         </div>
 
         {/* Right Section: Rotating Working Hours */}
@@ -116,11 +116,10 @@ export default function Navbar() {
               <li key={link.name.en}>
                 <Link
                   to={link.path}
-                  className={`text-lg font-medium hover:text-green-400 transition-colors duration-300 ${
-                    location.pathname === link.path
+                  className={`text-lg font-medium hover:text-green-400 transition-colors duration-300 ${location.pathname === link.path
                       ? "text-green-400 font-semibold"
                       : ""
-                  }`}
+                    }`}
                 >
                   {link.name[language]}
                 </Link>
@@ -167,11 +166,10 @@ export default function Navbar() {
                 <Link
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-2 px-2 rounded hover:bg-gray-200 transition-colors ${
-                    location.pathname === link.path
+                  className={`block py-2 px-2 rounded hover:bg-gray-200 transition-colors ${location.pathname === link.path
                       ? "bg-gray-200 font-semibold"
                       : ""
-                  }`}
+                    }`}
                 >
                   {link.name[language]}
                 </Link>
