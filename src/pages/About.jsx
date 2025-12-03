@@ -57,7 +57,7 @@ export default function About() {
               <img
                 src={shareefImg}
                 alt="Mohammed Shareef"
-                className="w-full h-64 sm:h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div className="w-full sm:w-2/3 p-6 flex flex-col justify-center">
@@ -81,7 +81,7 @@ export default function About() {
               <img
                 src={thwayyibImg}
                 alt="Mohammed Thwayyib"
-                className="w-full h-64 sm:h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div className="w-full sm:w-2/3 p-6 flex flex-col justify-center">
@@ -113,7 +113,7 @@ export default function About() {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <img src={member.img} alt={member.name} className="w-full h-48 object-cover" />
+              <img src={member.img} alt={member.name} className="w-full h-auto object-contain" />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-gray-600">{member.role}</p>
@@ -148,6 +148,7 @@ export default function About() {
           <FaPhoneAlt className="mr-3 text-blue-600" /> +974-7727-2786
         </p>
       </section>
+
     </div>
   );
 }
